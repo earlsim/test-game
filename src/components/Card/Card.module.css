@@ -1,0 +1,38 @@
+.cardContainer {
+  position: relative;
+  padding: 4px 0 0 4px;
+  perspective: 600px;
+}
+
+.card {
+  width: 92px;
+  height: 92px;
+  border: 1px solid black;
+  border-radius: 16px;
+  transition: transform ease-in-out .3s;
+  transform: rotateX(180deg);
+  backface-visibility: hidden;
+
+}
+
+.cardRotated {
+  transform: rotateX(0deg);
+}
+
+.cardBack {
+  position: absolute;
+  top: 4px;
+  width: 92px;
+  height: 92px;
+  border: 1px solid black;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  transition: transform ease-in-out .3s;
+  cursor: pointer;
+  background-color: #040654;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Ccircle fill='%2306B' cx='45' cy='45' r='10'/%3E%3Cg fill='%23800' fill-opacity='1'%3E%3Ccircle cx='0' cy='90' r='10'/%3E%3Ccircle cx='90' cy='90' r='10'/%3E%3Ccircle cx='90' cy='0' r='10'/%3E%3Ccircle cx='0' cy='0' r='10'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.cardBackActive {
+  transform: rotateX(180deg);
+}
